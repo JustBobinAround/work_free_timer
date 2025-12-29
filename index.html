@@ -144,19 +144,13 @@
   <div class="ideal-label" id="idealLabel"></div>
 
   <script>
-    let current = sessionStorage.getItem("current") || "Work";
-    let timeWork = parseFloat(sessionStorage.getItem("timeWork")) || 0;
-    let timeFree = parseFloat(sessionStorage.getItem("timeFree")) || 0;
-    let idealWork = parseFloat(sessionStorage.getItem("idealWork")) || 50;
+    let current =  "Work";
+    let timeWork =  0;
+    let timeFree =  0;
+    let idealWork = 50;
 
     let lastTime = performance.now();
 
-    function saveState() {
-      sessionStorage.setItem("current", current);
-      sessionStorage.setItem("timeWork", timeWork);
-      sessionStorage.setItem("timeFree", timeFree);
-      sessionStorage.setItem("idealWork", idealWork);
-    }
 
     function formatTime(seconds) {
       seconds = Math.floor(seconds);
