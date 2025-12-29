@@ -190,13 +190,11 @@
       document.getElementById("barWork").style.width = percentWork + "%";
       document.getElementById("barFree").style.width = percentFree + "%";
 
-      saveState();
       requestAnimationFrame(update);
     }
 
     function flip() {
       current = current === "Work" ? "Free" : "Work";
-      saveState();
     }
 
     const wrapper = document.getElementById("barWrapper");
@@ -206,7 +204,6 @@
     function updateIdealLine() {
       idealLine.style.left = `calc(${idealWork}% - 1.5px)`;
       idealLabel.textContent = `Ideal Work: ${idealWork.toFixed(1)}%`;
-      saveState();
     }
 
     let dragging = false;
